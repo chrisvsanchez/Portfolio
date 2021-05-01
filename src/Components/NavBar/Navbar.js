@@ -26,12 +26,15 @@ const Navbar = () => {
   );
 };
 const Wrapper = styled.div`
+  font-family: "Montserrat", sans-serif;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: lightblue;
-  height: 4%;
+  height: auto;
   h3 {
+    font-weight: 600;
     padding-left: 17px;
     font-size: 2rem;
   }

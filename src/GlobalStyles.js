@@ -26,10 +26,10 @@ time, mark, audio, video {
 article, aside, details, figcaption, figure, ::-moz-focus-outer, header, hgroup, ::-moz-range-thumb, nav, section{
     display:block;
 }
-/* 
+
 ol, ul {
      list-style:none;
-} */
+}
 blockquote, q {
     quotes:none
 }

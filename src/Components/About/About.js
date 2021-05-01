@@ -5,6 +5,14 @@ const About = () => {
     <Wrapper>
       <AboutImagesContainer></AboutImagesContainer>
       <AboutTextContainer>
+        {/* <TextWrapper> */}
+        <p>
+          Hell hello there! My name is Cassidy and I'm a Principal Developer
+          Experience Engineer at Netlify. Before now, I worked at React
+          Training, CodePen, Amazon, L4 Digital, Clarifai, and Venmo, and
+          graduated from Iowa State University. I run a weekly newsletter and
+          love teaching and helping people become better coders!
+        </p>
         <p>
           Hell hello there! My name is Cassidy and I'm a Principal Developer
           Experience Engineer at Netlify. Before now, I worked at React
@@ -20,12 +28,14 @@ const About = () => {
           interviews with me, or just play video games. No pressure to join in,
           and I appreciate your support a ton no matter what!
         </p>
+        {/* </TextWrapper> */}
       </AboutTextContainer>
     </Wrapper>
   );
 };
 export default About;
 const Wrapper = styled.div`
+  font-family: "Montserrat", sans-serif;
   display: flex;
   flex-direction: row;
   background-color: lightgoldenrodyellow;
@@ -39,12 +49,12 @@ const AboutTextContainer = styled.div`
   flex: 1;
   display: flex;
   flex-flow: column;
+  /* align-items: flex-start; */
   justify-content: center;
   background-color: lightsalmon;
-
   p {
-    display: block;
-
-    padding: 12px;
+    padding: 16px;
+    height: auto;
+    width: auto;
   }
 `;
