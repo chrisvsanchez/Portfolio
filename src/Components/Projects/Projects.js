@@ -4,6 +4,8 @@ import HomeBaristaLogo from "../Images/ProjectLogos/Home_barista_logo_white copy
 import VincereLogo from "../Images/ProjectLogos/Vincerecyclingclublogofinal black.png";
 import { Link } from "react-router-dom";
 import { FaGithub } from "react-icons/fa";
+import { DiHeroku } from "react-icons/di";
+import { IconContext } from "react-icons";
 const allProjects = [
   {
     name: "HomeBarista",
@@ -43,12 +45,24 @@ const Projects = () => {
               <AppDetails style={{ backgroundColor: p.color }}>
                 <h3>{p.name}</h3>
                 <p>{p.description}</p>
+
                 <ul>
                   {p.features.map((feat) => {
                     return <li>{feat}</li>;
                   })}
                 </ul>
-                <FaGithub />
+                <ButtonsWrapper>
+                  <IconContext.Provider value={{ color: "black", size: "2em" }}>
+                    <Button>
+                      <FaGithub />
+                      GitHub
+                    </Button>
+                    <Button>
+                      <DiHeroku />
+                      Deployed
+                    </Button>
+                  </IconContext.Provider>
+                </ButtonsWrapper>
               </AppDetails>
             </Wrapper>
           </>
@@ -66,9 +80,10 @@ const Wrapper = styled.div`
 `;
 const AppLogo = styled.div`
   flex: 1;
+  display: flex;
   justify-content: center;
-  align-items: center;
   img {
+    align-self: center;
     width: 350px;
     height: auto;
   }
@@ -77,16 +92,43 @@ const AppDetails = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-
-  justify-content: none;
-  background-color: darkmagenta;
+  padding: 16px;
+  h3 {
+    font-size: 3rem;
+    height: auto;
+  }
   p {
     padding-left: 16px;
+    height: auto;
+    font-size: 1.5rem;
   }
+
   li {
     padding-left: 32px;
-    display: block;
+    height: auto;
+    margin: 20px 0;
+    font-size: 2rem;
   }
 `;
+const Button = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 150px;
+  height: 50px;
+  border-radius: 20px;
+  background-color: blanchedalmond;
 
+  &:hover {
+    color: deeppink;
+    background-color: deepskyblue;
+  }
+`;
+const ButtonsWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  /* align-self:baseline; */
+`;
 export default Projects;
