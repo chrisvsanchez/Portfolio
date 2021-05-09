@@ -12,7 +12,6 @@ const LandingPage = () => {
   });
   return (
     <Wrapper>
-      {/* <ImageContainer> */}
       <IntroWrapper>
         <AnimatedHeader style={props}>
           <h1>
@@ -43,24 +42,29 @@ const LandingPage = () => {
   );
 };
 const Wrapper = styled.div`
+  /* flex: 1 1 0; */
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
   align-items: center;
   background-color: lightslategray;
   height: 92%;
+  /* @media (max-width: 1000px) {
+    flex-direction: row;
+  } */
 `;
 const IntroWrapper = styled.div`
   display: flex;
-  flex: 2;
+  flex: 1 1 0;
   flex-direction: row;
-
-  gap: 8px;
+  align-items: center;
+  /* gap: 8px; */
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
   background-color: none;
   h1 {
+    font-size: 3rem;
     height: auto;
     align-self: center;
   }
@@ -69,6 +73,24 @@ const IntroWrapper = styled.div`
     height: auto;
     border-radius: 50%;
     padding: 64px;
+  }
+  @media (max-width: 1000px) {
+    flex-direction: column-reverse;
+    /* align-items: center;
+    justify-content: center; */
+    h1 {
+      font-size: 2rem;
+      height: auto;
+      /* padding-left: 50px; */
+      width: 100%;
+      align-self: center;
+    }
+    img {
+      width: 380px;
+      height: auto;
+      border-radius: 50%;
+      padding: 64px;
+    }
   }
 `;
 
@@ -88,6 +110,8 @@ const SocialLinks = styled.div`
   .icons {
     height: 48px;
     width: 48px;
+    /* box-shadow: 0px 2px 26px hsl(0deg 0% 0%/0.35); */
+    /* background-color: inherit; */
     &:hover {
       color: deeppink;
     }

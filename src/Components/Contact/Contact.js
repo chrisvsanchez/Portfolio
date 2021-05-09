@@ -12,22 +12,21 @@ const Contact = () => {
         <ContactForm />
       </ContactFormWrapper>
 
-      <AnimatedEnvelopeWrapper>
+      {/* <AnimatedEnvelopeWrapper>
         <h3>Let's work Together</h3>
         <AnimatedEnvelope />
-      </AnimatedEnvelopeWrapper>
-      {/* </EnvelopeAndFormWrapper> */}
+      </AnimatedEnvelopeWrapper> */}
     </Wrapper>
   );
 };
 const Wrapper = styled.div`
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-  /* align-items: center; */
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   height: 98%;
-  background-color: skyblue;
   padding: 100px;
+  background-color: pink;
   h3 {
     padding: 18px;
     font-size: 2rem;
@@ -36,14 +35,16 @@ const Wrapper = styled.div`
 `;
 
 const ContactFormWrapper = styled.div`
-  flex: 1 0 120px;
+  flex: 1 1 250px;
   background: cornflowerblue;
-  padding: 20px;
-  width: 500px;
-  height: 100%;
+  padding: 40px 40px 40px 40px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
-const AnimatedEnvelopeWrapper = styled.div`
-  flex: 1;
-  background: pink;
-`;
+// const AnimatedEnvelopeWrapper = styled.div`
+//   flex: 1;
+//   background: pink;
+// `;
 export default Contact;

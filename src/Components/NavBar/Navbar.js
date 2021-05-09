@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <Wrapper>
-      <h3>Chris V Sanchez</h3>
+      <h3>CvS</h3>
       <ul className="nav-links">
         <li>
           <Link ClassName="anchorLink" to="/">

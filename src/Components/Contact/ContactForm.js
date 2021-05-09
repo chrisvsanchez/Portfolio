@@ -53,44 +53,72 @@ const FormContact = () => {
         value={message}
         onChange={(e) => setMessage(e.target.value)}
       />
-      <div>
-        <button className="submitButton" type="submit" value="Send">
-          Submit
-        </button>
-      </div>
+      {/* <div> */}
+      <button className="submitButton" type="submit" value="Send">
+        Submit
+      </button>
+      {/* </div> */}
     </FormWrapper>
   );
 };
 
 const FormWrapper = styled.form`
+  flex: 1 1 0;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 10px;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
   height: auto;
+  width: 500px;
   border-radius: 20px;
   padding: 20px;
   background-color: red;
+  box-shadow: 0px 2px 26px hsl(0deg 0% 0%/0.35);
+  /* padding-bottom: 10px; */
   label {
     font-size: 1.5rem;
+
+    height: auto;
   }
   input {
-    height: 3em;
+    height: 3rem;
     width: 100%;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    text-indent: 10px;
+    &:focus {
+      outline: none;
+      border-color: #719ece;
+      box-shadow: 0 0 10px #719ece;
+    }
   }
   textarea {
-    height: 6em;
+    height: 200px;
+    border-radius: 20px;
     width: 100%;
+    font-size: 1.5rem;
+    font-family: inherit;
+    text-indent: 10px;
+    &:focus {
+      outline: none;
+      border-color: #719ece;
+      box-shadow: 0 0 10px #719ece;
+    }
   }
   button {
     /* flex: 0 100% 100px; */
-    width: 300px;
-    height: 3em;
+    width: 100%;
+    height: 3rem;
     border-radius: 20px;
     text-transform: uppercase;
+    box-shadow: 0px 2px 26px hsl(0deg 0% 0%/0.35);
 
     &:hover {
       background-color: greenyellow;
+    }
+    &:focus {
+      outline: none;
+      border-color: #719ece;
+      box-shadow: 0 0 10px #719ece;
     }
   }
 `;
