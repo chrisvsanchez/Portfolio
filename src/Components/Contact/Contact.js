@@ -21,6 +21,7 @@ const Contact = () => {
   );
 };
 const Wrapper = styled.div`
+  font-family: inherit;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -45,6 +46,7 @@ const ContactFormWrapper = styled.div`
   /* padding: 40px 40px 40px 40px; */
   height: auto;
   max-width: 100%;
+  font-family: inherit;
   @media ${QUERIES.laptopAndDown} {
   }
   @media ${QUERIES.tabletAndDown} {
