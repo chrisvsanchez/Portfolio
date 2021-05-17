@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components/macro";
+import QUERIES from "../Constants";
 import {
   SiRails,
   SiJavascript,
@@ -43,17 +44,35 @@ const IconsContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  gap: 8px;
+  /* gap: 8px; */
   align-items: center;
-  background-color: white;
-  height: 100%;
-  max-width: 100px;
-  min-width: 70px;
-  padding: 12px;
+  width: 100%;
+
+  /* max-width: 100px; */
+  /* min-width: 70px; */
+  /* padding: 12px; */
 
   .icon {
     width: 50px;
     height: auto;
+    /* color: ; */
     /* padding: 5px; */
+  }
+  @media ${QUERIES.laptopAndDown} {
+    max-width: 200px;
+  }
+  @media ${QUERIES.tabletAndDown} {
+    flex: 1;
+    max-width: 100px;
+  }
+  @media ${QUERIES.mobileAndDown} {
+    /* flex: 1 1 100px; */
+    max-width: 60px;
+
+    .icon {
+      width: 40px;
+      height: auto;
+      padding: 4px;
+    }
   }
 `;

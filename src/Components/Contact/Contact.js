@@ -2,6 +2,7 @@ import { React } from "react";
 import styled from "styled-components";
 import ContactForm from "./ContactForm";
 import AnimatedEnvelope from "./AnimatedEnvelope";
+import QUERIES from "../Constants";
 
 const Contact = () => {
   return (
@@ -25,8 +26,8 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   height: 98%;
-  padding: 100px;
-  background-color: pink;
+  padding: 10px;
+  /* background-color: pink; */
   h3 {
     padding: 18px;
     font-size: 2rem;
@@ -35,13 +36,22 @@ const Wrapper = styled.div`
 `;
 
 const ContactFormWrapper = styled.div`
-  flex: 1 1 250px;
-  background: cornflowerblue;
-  padding: 40px 40px 40px 40px;
-  height: auto;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 24px;
+  /* background: cornflowerblue; */
+  /* padding: 40px 40px 40px 40px; */
+  height: auto;
+  max-width: 100%;
+  @media ${QUERIES.laptopAndDown} {
+  }
+  @media ${QUERIES.tabletAndDown} {
+  }
+  @media ${QUERIES.mobileAndDown} {
+    padding: 16px;
+  }
 `;
 // const AnimatedEnvelopeWrapper = styled.div`
 //   flex: 1;

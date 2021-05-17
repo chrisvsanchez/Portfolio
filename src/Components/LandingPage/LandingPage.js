@@ -1,6 +1,7 @@
 import { React, useState } from "react";
 import styled from "styled-components/macro";
 import { FaGithub, FaMedium, FaLinkedin, FaCodepen } from "react-icons/fa";
+import QUERIES from "../Constants";
 import Chris from "../Images/ProjectLogos/IMG_1076.jpeg";
 import { useSpring, animated } from "react-spring";
 // import { useTrail, animated } from "react-spring";
@@ -21,8 +22,7 @@ const LandingPage = () => {
         </AnimatedHeader>
         <img src={Chris} alt="Chris Sanchez"></img>
       </IntroWrapper>
-      {/* </ImageContainer> */}
-      {/* <MainText>Chris V Sanchez</MainText> */}
+
       <SocialLinks>
         <a href="https://github.com/chrisvsanchez">
           <FaGithub className="icons" />
@@ -48,7 +48,9 @@ const Wrapper = styled.div`
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
   align-items: center;
-  background-color: lightslategray;
+  /* background-color: background-color: #0093E9; */
+  background-color: none;
+  /* background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%); */
   height: 92%;
   /* @media (max-width: 1000px) {
     flex-direction: row;
@@ -64,24 +66,25 @@ const IntroWrapper = styled.div`
   font-weight: 900;
   background-color: none;
   h1 {
+    flex: 1;
     font-size: 3rem;
     height: auto;
-    align-self: center;
+    /* align-self: center; */
   }
   img {
+    flex: 1;
+    /* border: black 3px solid;
+    border: black 3px solid; */
     width: 480px;
     height: auto;
     border-radius: 50%;
     padding: 64px;
   }
-  @media (max-width: 1000px) {
-    flex-direction: column-reverse;
-    /* align-items: center;
-    justify-content: center; */
+
+  @media ${QUERIES.laptopAndDown} {
     h1 {
-      font-size: 2rem;
+      font-size: 3rem;
       height: auto;
-      /* padding-left: 50px; */
       width: 100%;
       align-self: center;
     }
@@ -90,6 +93,32 @@ const IntroWrapper = styled.div`
       height: auto;
       border-radius: 50%;
       padding: 64px;
+    }
+    /* h1 {
+      font-size: 3rem;
+    } */
+    p {
+      font-size: 1rem;
+      line-height: 2rem;
+    }
+  }
+  @media ${QUERIES.tabletAndDown} {
+    h1 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1rem;
+    }
+  }
+  @media ${QUERIES.mobileAndDown} {
+    /* flex-flow: row-wrap; */
+    flex-direction: column-reverse;
+    h1 {
+      width: auto;
+      align-self: center;
+      /* padding: 16px; */
+      font-size: 1.7rem;
     }
   }
 `;

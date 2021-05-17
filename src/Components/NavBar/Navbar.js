@@ -1,7 +1,10 @@
-import React from "react";
+import { React, useState } from "react";
 import styled from "styled-components/macro";
+import QUERIES from "../Constants";
 import { Link } from "react-router-dom";
+// import { GiHamburgerMenu } from "react-icons/gi";
 const Navbar = () => {
+  // const [toggleMenu, setToggleMenu] = useState(false);
   return (
     <Wrapper>
       <h3>CvS</h3>
@@ -9,6 +12,11 @@ const Navbar = () => {
         <li>
           <Link ClassName="anchorLink" to="/">
             Home
+          </Link>
+        </li>
+        <li>
+          <Link ClassName="anchorLink" to="/">
+            About
           </Link>
         </li>
         <li>
@@ -31,7 +39,9 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: lightblue;
+  /* background-color: #0093e9; */
+  background-image: none;
+  /* background-color: lightblue; */
   height: auto;
   h3 {
     font-weight: 600;
@@ -54,6 +64,18 @@ const Wrapper = styled.div`
     color: black;
     &:hover {
       color: deeppink;
+    }
+  }
+  @media ${QUERIES.laptopAndDown} {
+  }
+  @media ${QUERIES.tabletAndDown} {
+  }
+  @media ${QUERIES.mobileAndDown} {
+    .nav-links {
+      display: none;
+    }
+    h3 {
+      padding: 17px;
     }
   }
 `;

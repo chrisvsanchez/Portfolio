@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import styled from "styled-components/macro";
 import emailjs from "emailjs-com";
-
+import QUERIES from "../Constants";
 const FormContact = () => {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
@@ -53,29 +53,27 @@ const FormContact = () => {
         value={message}
         onChange={(e) => setMessage(e.target.value)}
       />
-      {/* <div> */}
+
       <button className="submitButton" type="submit" value="Send">
         Submit
       </button>
-      {/* </div> */}
     </FormWrapper>
   );
 };
 
 const FormWrapper = styled.form`
-  flex: 1 1 0;
+  flex: 1 1 1;
   display: flex;
   flex-direction: column;
   /* flex-wrap: wrap; */
-  height: auto;
-  width: 500px;
+  max-width: 100%;
   border-radius: 20px;
   padding: 20px;
-  background-color: red;
+  /* background-color: red; */
   box-shadow: 0px 2px 26px hsl(0deg 0% 0%/0.35);
-  /* padding-bottom: 10px; */
+  gap: 8px;
   label {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 
     height: auto;
   }
@@ -83,8 +81,9 @@ const FormWrapper = styled.form`
     height: 3rem;
     width: 100%;
     border-radius: 20px;
-    font-size: 1.5rem;
-    text-indent: 10px;
+    font-size: 1rem;
+    padding-left: 8px;
+
     &:focus {
       outline: none;
       border-color: #719ece;
@@ -95,9 +94,11 @@ const FormWrapper = styled.form`
     height: 200px;
     border-radius: 20px;
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-family: inherit;
-    text-indent: 10px;
+    resize: none;
+    /* text-indent: 10px; */
+    padding-left: 8px;
     &:focus {
       outline: none;
       border-color: #719ece;
@@ -106,12 +107,14 @@ const FormWrapper = styled.form`
   }
   button {
     /* flex: 0 100% 100px; */
+    align-self: center;
     width: 100%;
     height: 3rem;
     border-radius: 20px;
     text-transform: uppercase;
     box-shadow: 0px 2px 26px hsl(0deg 0% 0%/0.35);
-
+    font-family: inherit;
+    letter-spacing: 0.2rem;
     &:hover {
       background-color: greenyellow;
     }
@@ -120,6 +123,14 @@ const FormWrapper = styled.form`
       border-color: #719ece;
       box-shadow: 0 0 10px #719ece;
     }
+  }
+  @media ${QUERIES.laptopAndDown} {
+  }
+  @media ${QUERIES.tabletAndDown} {
+  }
+  @media ${QUERIES.mobileAndDown} {
+    flex: 1 1 375px;
+    width: 100%;
   }
 `;
 
