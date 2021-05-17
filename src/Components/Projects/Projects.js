@@ -194,7 +194,9 @@ const AppDetails = styled.div`
       font-size: 1rem;
       height: auto;
     }
-
+    ul {
+      padding: 12px;
+    }
     li {
       padding-left: 16px;
       height: auto;

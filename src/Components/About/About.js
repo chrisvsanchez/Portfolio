@@ -78,17 +78,20 @@ const AboutTextWrapper = styled.div`
   flex-wrap: wrap;
   display: flex;
   flex-flow: column;
-  /* justify-content: center; */
+  /* justify-content: flex-end; */
   width: 100%;
+  height: 100%;
   background-color: none;
+  padding: 16px;
   p {
     /* flex: 1; */
-    padding: 0px 32px;
+    padding: 32px;
     height: auto;
     min-width: 100%;
-    line-height: 3rem;
+    line-height: 3.3rem;
     font-weight: 500;
-    font-size: 3rem;
+    /* font-size: 2.2rem; */
+    font-size: clamp(2rem, -0.775rem + 6.33vw, 2.5rem);
     word-wrap: break-word;
     margin: 0;
     text-indent: 1rem;
@@ -111,27 +114,32 @@ const AboutTextWrapper = styled.div`
     padding: 26px;
   }
   @media ${QUERIES.laptopAndDown} {
+    padding: 4px;
     h2 {
       font-size: 3rem;
     }
     p {
-      font-size: 1rem;
-      line-height: 2rem;
+      /* font-size: 1.2rem; */
+      font-size: clamp(2rem, -0.875rem + 6.33vw, 1.5rem);
+      line-height: 3rem;
+      padding: 32px;
     }
   }
   @media ${QUERIES.tabletAndDown} {
+    padding: 2px;
     h2 {
       font-size: 2rem;
-      padding: 16px;
+      padding: 16px 16px 0 16px;
     }
     p {
-      padding: 0px 16px 12px 16px;
-      font-size: 1rem;
-      line-height: 1.6rem;
+      padding: 16px 16px 0 16px;
+      font-size: clamp(1rem, -0.875rem + 6.33vw, 1.5rem);
+      line-height: 2rem;
+      flex-grow: 2;
     }
   }
   @media ${QUERIES.mobileAndDown} {
-    flex: 1 1 0;
+    /* flex: 1 1 0; */
 
     h2 {
       align-self: center;
@@ -142,11 +150,15 @@ const AboutTextWrapper = styled.div`
     }
     p {
       /* font-size: 0.8rem; */
-      font-size: 0.9rem;
+      flex: 1 1 100%;
+      font-size: clamp(0.9rem, -0.875rem + 6vw, 2.5rem);
+      /* font-size: 0.9rem; */
+
       padding: 0px 16px;
       line-height: 1.2rem;
       text-indent: 1.5rem;
       margin: 0 0 15px 0;
+      height: auto;
     }
   }
 `;
