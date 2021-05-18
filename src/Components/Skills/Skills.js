@@ -36,48 +36,77 @@ const Wrapper = styled.div`
   flex-direction: row;
   background-color: navajowhite;
   max-width: 100%;
+  font-family: "Montserrat", sans-serif;
 `;
 const SkillsListUL = styled.ul`
   /* align-self: center; */
-  flex: 2;
+  flex: 2 1 800px;
   display: flex;
   flex-direction: column;
   /* align-items: center; */
   /* gap: 8px; */
   /* padding-left: 50px; */
   background-color: gainsboro;
-  padding: 28px;
+  padding: 0 28px 28px 28px;
   width: 100%;
   li {
     align-self: center;
     font-weight: 400;
     text-align: center;
     height: auto;
-    font-size: 1rem;
+    font-size: 2rem;
     padding-bottom: 16px;
   }
   h3 {
     align-self: center;
     height: auto;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 3rem;
     text-align: center;
   }
   h2 {
     align-self: center;
     font-weight: 800;
-    font-size: 2rem;
+    font-size: 4rem;
     height: auto;
     padding: 0 16px 16px 16px;
   }
 
   @media ${QUERIES.laptopAndDown} {
+    h2 {
+      font-size: clamp(2rem, -0.875rem + 6vw, 2.5rem);
+      padding: 14px;
+    }
+    h3 {
+      font-size: clamp(1.6rem, -0.875rem + 6vw, 2.5rem);
+    }
+    li {
+      font-size: clamp(1rem, -0.875rem + 6vw, 2.5rem);
+    }
   }
   @media ${QUERIES.tabletAndDown} {
+    h2 {
+      font-size: clamp(1.2rem, -0.875rem + 6vw, 2.5rem);
+      padding: 14px;
+    }
+    h3 {
+      font-size: clamp(0.9rem, -0.875rem + 6vw, 2.5rem);
+    }
+    li {
+      font-size: clamp(0.8rem, -0.875rem + 6vw, 2.5rem);
+    }
   }
   @media ${QUERIES.mobileAndDown} {
+    padding: 0 18px;
+    h2 {
+      font-size: clamp(1.2rem, -0.875rem + 6vw, 2.5rem);
+      padding: 14px;
+    }
     h3 {
-      font-size: 1.4rem;
+      font-size: clamp(0.9rem, -0.875rem + 6vw, 2.5rem);
+    }
+    li {
+      font-size: clamp(0.8rem, -0.875rem + 6vw, 2.5rem);
     }
   }
 `;

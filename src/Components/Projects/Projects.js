@@ -92,8 +92,8 @@ const Wrapper = styled.div`
 `;
 const AppLogo = styled.div`
   flex: 1;
-  width: 100%;
-
+  max-width: 100%;
+  max-height: auto;
   /* padding: 10px; */
   display: flex;
   justify-content: center;
@@ -106,18 +106,23 @@ const AppLogo = styled.div`
     flex-wrap: wrap;
   }
   @media ${QUERIES.laptopAndDown} {
-    flex: 1 1 300px;
+    flex: 1;
+    flex-direction: column-reverse;
+    max-width: 100%;
+    max-height: auto;
     img {
-      max-width: 100%;
+      max-width: 50%;
       max-height: 100%;
     }
   }
   @media ${QUERIES.tabletAndDown} {
-    flex: 1 0 200px;
+    flex: 1;
+    flex-direction: column-reverse;
+    max-width: 100%;
+    max-height: auto;
     img {
-      max-width: 100%;
-      max-height: 50%;
-      padding: 4%;
+      max-width: 50%;
+      max-height: 100%;
     }
   }
   @media ${QUERIES.mobileAndDown} {
@@ -180,6 +185,28 @@ const AppDetails = styled.div`
     }
   }
   @media ${QUERIES.tabletAndDown} {
+    max-width: 100%;
+    /* padding-left: 16px; */
+    h3 {
+      font-size: 2rem;
+      padding: 12px 0 0 12px;
+    }
+    p {
+      padding: 0 24px 0 24px;
+
+      font-size: 1rem;
+      height: auto;
+    }
+    ul {
+      padding: 12px;
+    }
+    li {
+      padding-left: 16px;
+      height: auto;
+      margin: 12px 0;
+      font-size: 1rem;
+      list-style: inside;
+    }
   }
   @media ${QUERIES.mobileAndDown} {
     max-width: 100%;

@@ -46,33 +46,44 @@ const IconsContainer = styled.div`
   justify-content: space-evenly;
   /* gap: 8px; */
   align-items: center;
-  width: 100%;
+  max-width: 10%;
 
   /* max-width: 100px; */
   /* min-width: 70px; */
-  /* padding: 12px; */
+  padding: 12px;
 
   .icon {
-    width: 50px;
+    width: 80px;
     height: auto;
     /* color: ; */
     /* padding: 5px; */
   }
   @media ${QUERIES.laptopAndDown} {
-    max-width: 200px;
+    flex: 1;
+    max-width: 8%;
+    .icon {
+      width: 50px;
+      height: auto;
+      padding: 4px;
+    }
   }
   @media ${QUERIES.tabletAndDown} {
     flex: 1;
-    max-width: 100px;
-  }
-  @media ${QUERIES.mobileAndDown} {
-    /* flex: 1 1 100px; */
-    max-width: 60px;
+    max-width: 15%;
 
     .icon {
-      width: 40px;
+      width: 50px;
       height: auto;
-      padding: 4px;
+    }
+  }
+  @media ${QUERIES.mobileAndDown} {
+    flex: 1 1 100px;
+    max-width: 15%;
+
+    .icon {
+      width: 50px;
+      height: auto;
+      padding: 6px;
     }
   }
 `;
