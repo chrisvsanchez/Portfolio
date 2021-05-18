@@ -34,6 +34,7 @@ const Skills = () => {
 const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
+  /* justify-content: center; */
   background-color: navajowhite;
   max-width: 100%;
   font-family: "Montserrat", sans-serif;
@@ -74,14 +75,16 @@ const SkillsListUL = styled.ul`
 
   @media ${QUERIES.laptopAndDown} {
     h2 {
-      font-size: clamp(2rem, -0.875rem + 6vw, 2.5rem);
+      font-size: clamp(2rem, -0.875rem + 6.33vw, 2rem);
       padding: 14px;
     }
     h3 {
-      font-size: clamp(1.6rem, -0.875rem + 6vw, 2.5rem);
+      font-size: clamp(1.6rem, -0.875rem + 6.33vw, 1.6rem);
+      font-weight: 600;
+      line-height: 2rem;
     }
     li {
-      font-size: clamp(1rem, -0.875rem + 6vw, 2.5rem);
+      font-size: clamp(1rem, -0.875rem + 6.33vw, 1rem);
     }
   }
   @media ${QUERIES.tabletAndDown} {
@@ -107,6 +110,7 @@ const SkillsListUL = styled.ul`
     }
     li {
       font-size: clamp(0.8rem, -0.875rem + 6vw, 2.5rem);
+      /* justify-content: center; */
     }
   }
 `;

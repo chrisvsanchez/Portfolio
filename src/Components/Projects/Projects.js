@@ -42,9 +42,9 @@ const Projects = () => {
         return (
           <>
             <Wrapper>
-              {/* <AppLogo style={{ backgroundColor: p.color }}>
+              <AppLogo style={{ backgroundColor: p.color }}>
                 <img src={p.logo} alt={`${p.name}` + "logo"} />
-              </AppLogo> */}
+              </AppLogo>
 
               <AppDetails style={{ backgroundColor: p.color }}>
                 <h3>{p.name}</h3>
@@ -55,9 +55,9 @@ const Projects = () => {
                     return <li>{feat}</li>;
                   })}
                 </ul>
-                <AppLogo style={{ backgroundColor: p.color }}>
+                {/* <AppLogo style={{ backgroundColor: p.color }}>
                   <img src={p.logo} alt={`${p.name}` + "logo"} />
-                </AppLogo>
+                </AppLogo> */}
                 <ButtonsWrapper>
                   <IconContext.Provider
                     value={{ color: "green", size: "30px" }}
@@ -101,18 +101,19 @@ const AppLogo = styled.div`
   /* border-radius: 0%; */
 
   img {
-    max-width: 100%;
-    max-height: 75%;
-    flex-wrap: wrap;
+    max-width: 50%;
+    max-height: auto;
+    /* flex-wrap: wrap; */
   }
   @media ${QUERIES.laptopAndDown} {
     flex: 1;
-    flex-direction: column-reverse;
+    flex-direction: column;
     max-width: 100%;
     max-height: auto;
     img {
-      max-width: 50%;
-      max-height: 100%;
+      max-width: 100%;
+      /* max-height: 50%; */
+      max-height: 60%;
     }
   }
   @media ${QUERIES.tabletAndDown} {
@@ -121,7 +122,7 @@ const AppLogo = styled.div`
     max-width: 100%;
     max-height: auto;
     img {
-      max-width: 50%;
+      max-width: 100%;
       max-height: 100%;
     }
   }
@@ -151,6 +152,7 @@ const AppDetails = styled.div`
   h3 {
     font-size: 5rem;
     height: auto;
+    padding: 16px;
   }
   p {
     padding-left: 16px;
@@ -182,6 +184,7 @@ const AppDetails = styled.div`
       height: auto;
       margin: 20px 0;
       font-size: 1rem;
+      list-style: inside;
     }
   }
   @media ${QUERIES.tabletAndDown} {
