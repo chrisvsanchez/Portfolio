@@ -29,17 +29,17 @@ const LandingPage = () => {
       </IntroWrapper>
 
       <SocialLinks>
-        <a href="https://github.com/chrisvsanchez">
+        <a href="https://github.com/chrisvsanchez" target="_blank">
           <FaGithub className="icons" />
         </a>
 
-        <a href="https://www.linkedin.com/in/chrisvsanchez/">
+        <a href="https://www.linkedin.com/in/chrisvsanchez/" target="_blank">
           <FaLinkedin className="icons" />
         </a>
-        <a href="https://chrisvsanchez.medium.com/">
+        <a href="https://chrisvsanchez.medium.com/" target="_blank">
           <FaMedium className="icons" />
         </a>
-        <a href="https://codepen.io/Chrisvsanchez">
+        <a href="https://codepen.io/Chrisvsanchez" target="_blank">
           <FaCodepen className="icons" />
         </a>
       </SocialLinks>
