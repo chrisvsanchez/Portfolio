@@ -33,13 +33,13 @@ const LandingPage = () => {
           <FaGithub className="icons" />
         </a>
 
-        <a href="/https://www.linkedin.com/in/chrisvsanchez/">
+        <a href="https://www.linkedin.com/in/chrisvsanchez/">
           <FaLinkedin className="icons" />
         </a>
-        <a href="/https://chrisvsanchez.medium.com/">
+        <a href="https://chrisvsanchez.medium.com/">
           <FaMedium className="icons" />
         </a>
-        <a href="/https://codepen.io/Chrisvsanchez">
+        <a href="https://codepen.io/Chrisvsanchez">
           <FaCodepen className="icons" />
         </a>
       </SocialLinks>
